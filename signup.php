@@ -7,33 +7,45 @@
   <?php
     if (isset($_GET['error'])) {
       if ($_GET['error'] == "emptyfields") {
-        echo '<p>Fill in all the fields!</p>';
+        echo '<p class="error">Fill in all the fields!</p>';
       }
       else if ($_GET['error'] == "invaliduidmail") {
-        echo '<p>Invalid username and email!</p>';
+        echo '<p class="error">Invalid username and email!</p>';
       }
       else if ($_GET['error'] == "invaliduid") {
-        echo '<p>Invalid username!</p>';
+        echo '<p class="error">Invalid username!</p>';
       }
       else if ($_GET['error'] == "invalidmail") {
-        echo '<p>Invalid email!</p>';
+        echo '<p class="error">Invalid email!</p>';
       }
       else if ($_GET['error'] == "passwordcheck") {
-        echo '<p>Your passwords do not match!</p>';
+        echo '<p class="error">Your passwords do not match!</p>';
       }
       else if ($_GET['error'] == "usertaken") {
-        echo '<p>Username is already taken!</p>';
+        echo '<p class="error">Username is already taken!</p>';
       }
     }
     else if ($_GET['signup'] == "success") {
-      echo '<p>Signup successful!</p>';
+      echo '<p class="success">Signup successful!</p>';
     }
   ?>
   <form action="includes/signup.inc.php" method="post">
-    <input type="text" name="uid" placeholder="Username">
-    <input type="text" name="mail" placeholder="Email">
-    <input type="password" name="pwd" placeholder="Password">
-    <input type="password" name="pwd-repeat" placeholder="Repeat password">
+    <div class="form-element">
+      <label>Username</label>
+      <input type="text" name="uid">
+    </div>
+    <div class="form-element">
+      <label>Email</label>
+      <input type="text" name="mail">
+    </div>
+    <div class="form-element">
+      <label>Password</label>
+      <input type="password" name="pwd">
+    </div>
+    <div class="form-element">
+      <label>Repeat Password</label>
+      <input type="password" name="pwd-repeat">
+    </div>
     <button type="submit" name="signup-submit">Signup</button>
   </form>
 </main>
