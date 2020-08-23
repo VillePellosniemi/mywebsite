@@ -40,11 +40,11 @@
     </div>
     <div class="form-element">
       <label>Password</label>
-      <input type="password" name="pwd">
+      <input type="text" name="pwd">
     </div>
     <div class="form-element">
       <label>Repeat Password</label>
-      <input type="password" name="pwd-repeat">
+      <input type="text" name="pwd-repeat">
     </div>
     <button type="submit" name="signup-submit">Signup</button>
   </form>

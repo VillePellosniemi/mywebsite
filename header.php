@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-element">
                       <label>Password</label>
-                      <input type="password" name="pwd">
+                      <input type="text" name="pwd">
                     </div>
                     <button type="submit" name="login-submit">Login</button>
                     </form>
